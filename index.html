@@ -32,24 +32,26 @@
 		<script type="text/javascript" src="./js/components/posts/posts.module.js"></script>
 		<script type="text/javascript" src="./js/components/posts/posts.controller.js"></script>
 		
-		<div class="span2">
-    			<b>Home</b>
-    			<b>About</b>
-		</div>
-		<div class="span10">
-    			<div class="span12" data-ng-controller="PostsCtrl as vmPostsCtrl">
-    				<div data-ng-repeat="post in vmPostsCtrl.posts">
-    					<p><b>{{post.title}}</b></p>
-    					<p>Postado dia {{post.date | date}} por {{post.author}}</p>
-    					<p>{{post.content}}</p>
-    				</div>
-    			</div>
-	    		<div class="span12">
-	    			<ul>
-        				<li><a href="mailto:alansansoa@gmail.com">email</a></li>
-        				<li><a href="https://github.com/alanssoares">github.com/alanssoares</a></li>
-				</ul>	
-	    		</div>
+		<div class="span12">
+			<div class="span2">
+	    			<b>Home</b>
+	    			<b>About</b>
+			</div>
+			<div class="span10">
+	    			<div class="span12" data-ng-controller="PostsCtrl as vmPostsCtrl">
+	    				<div data-ng-repeat="post in vmPostsCtrl.posts">
+	    					<p><b>{{post.title}}</b></p>
+	    					<p>Postado dia {{post.date | date}} por {{post.author}}</p>
+	    					<p>{{post.content}}</p>
+	    				</div>
+	    			</div>
+		    		<div class="span12">
+		    			<ul>
+	        				<li><a href="mailto:alansansoa@gmail.com">email</a></li>
+	        				<li><a href="https://github.com/alanssoares">github.com/alanssoares</a></li>
+					</ul>	
+		    		</div>
+			</div>
 		</div>
 	</body>
 </html>
