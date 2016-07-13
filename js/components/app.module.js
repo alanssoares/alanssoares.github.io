@@ -6,7 +6,8 @@
 	           'ngResource',
 	           'ngSanitize',
 	           'ui.router', 
-	           'ui.bootstrap'
+	           'ui.bootstrap',
+	           'posts'
 	]);
 
 })(angular);
