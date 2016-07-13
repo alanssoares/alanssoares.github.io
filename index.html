@@ -30,9 +30,18 @@
 		<script type="text/javascript" src="./js/components/app.module.js"></script>
 
 		<div class="container">
-	    		<div>
-	        		<h1>Hi there, I'm Alan Soares!</h1>
-					<p>This is my first web page using the github</a></p>
+	    		<div class="span12">
+	    			<div class="span4">
+	    				<span>Home</span>
+	    				<span>About</span>
+	    			</div>
+	    			<div class="span8" data-ng-controller="PostsCtrl as vmPostsCtrl">
+	    				<div data-ng-repeat="post in vmPostsCtrl.posts">
+	    					<p><b>{{post.title}}</b></p>
+	    					<p>Postado dia {{post.date | date}} por {{post.author}}</p>
+	    					<p>{{post.content}}</p>
+	    				</div>
+	    			</div>
 	    		</div>
 		</div>
 		<footer>
