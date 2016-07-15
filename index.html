@@ -34,9 +34,9 @@
 		<script type="text/javascript" src="./js/components/posts/posts.module.js"></script>
 		<script type="text/javascript" src="./js/components/posts/posts.controller.js"></script>
 		
-		<div class="col-lg-12 container">
-			<div class="col-lg-3 sidebar">
-				<h1 class="white">Alan Soares</h1>
+		<div id="container-principal">
+			<div class="sidebar">
+				<h1 class="sidebar-author">Alan Soares</h1>
 				<p class="sidebar-description">Compartilhando conhecimento</p>
 				<ul class="list-inline">
 					<li><a target="_blank" href="https://twitter.com/alan_ssoares"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
@@ -44,16 +44,19 @@
 					<li><a target="_blank" href="https://br.linkedin.com/in/alanssoares"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
-			<div class="col-lg-9 post-list">
-	    			<div class="col-lg-12 post" data-ng-controller="PostsCtrl as vmPostsCtrl">
-	    				<div data-ng-repeat="post in vmPostsCtrl.posts">
+			<div class="post-list">
+	    			<div data-ng-controller="PostsCtrl as vmPostsCtrl">
+	    				<div class="post" data-ng-repeat="post in vmPostsCtrl.posts">
 	    					<h1 class="post-title">{{post.title}}</h1>
 	    					<p class="post-author">Postado dia {{post.date | date}} por {{post.author}}</p>
-	    					<p class="post-content">{{post.content}}</p>
-	    					<a class="post-button" href="">Continue lendo<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+	    					<p class="post-description">{{post.description}}</p>
+	    					<a class="post-button" href="{{post.url}}" style="text-decoration: none;">Continue lendo</a>
 	    				</div>
 	    			</div>
 			</div>
+		</div>
+		<div id="footer-fixed">
+			<small>© Copyright 2016, Alan Soares</small>
 		</div>
 	</body>
 </html>
