@@ -5,7 +5,7 @@
 		.module('posts')
 		.factory('PostService', PostService);
 		
-	var baseUrl = '\'https://github.com/alanssoares/alanssoares.github.io/tree/master/js/components/posts/views/';
+	var baseUrl = '\'https://alanssoares.github.io/js/components/posts/views/';
 	
 	function PostService(){
 		return {
