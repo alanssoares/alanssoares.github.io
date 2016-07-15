@@ -5,22 +5,24 @@
 		.module('posts')
 		.factory('PostService', PostService);
 		
-		function PostService(){
-		  return {
-		      getPosts: getPosts
-		  }
-		  
-		  function getPosts(){
-		    var posts = [{
-		    title: 'Bem vindo', 
-		    author: 'Alan Soares', 
-		    date: '15/07/2016', 
-		    description: 'Este foi o primeiro post publicado na página. Espero que aproveitem ao máximo todo o conteúdo que estarei compartilhando.
-',
-		    url: baseUrl + 'boas-vindas.html'
-	    }];
-	    
-		    return posts;
-		  }
-		}
+	var baseUrl = 'https://github.com/alanssoares/alanssoares.github.io/tree/master/js/components/posts/views/';
+	
+	function PostService(){
+		return {
+	    	getPosts: getPosts
+	  	}
+
+	  	function getPosts(){
+	    	var posts = [
+	    	{
+		    	title: 'Bem vindo', 
+		    	author: 'Alan Soares', 
+		    	date: '15/07/2016', 
+		    	description: 'Este foi o primeiro post publicado na página. Espero que aproveitem ao máximo todo o conteúdo que estarei compartilhando.',
+		    	url: baseUrl + 'boas-vindas.html'
+    		}];
+    		
+			return posts;
+	  	}
+	}
 })(angular);
